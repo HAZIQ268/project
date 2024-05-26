@@ -2,11 +2,12 @@
     include("header.php");
     include("connection.php");
 
-    $sql="select users .*,role.role_name from users join role on role.id =users.RoleId_FK";
+    $sql="select users .*,role.Role_Name from users join role on role.id =users.Roleid_FK";
     $result =mysqli_query($conn,$sql);
 
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 
   <!--**********************************
             Content body start
@@ -20,7 +21,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-responsive-sm">
+                                    <table class="table table-responsive-sm table-bordered text-dark">
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
@@ -38,7 +39,7 @@
                                             <tr>
                                           <th><?php echo $rows['id']  ?></th>
                                           <th><?php echo $rows['username']  ?></th>
-                                          <th><?php echo $rows['role_name']  ?></th>
+                                          <th><?php echo $rows['Role_Name']  ?></th>
                                           <td><a href="user_update.php?id=<?php echo $rows
                                                     ['id']?>"><i class="bi bi-pencil-square"></i>Edit</a></td>
                                                     <td><a href="user_delete.php?id=<?php echo $rows
@@ -53,6 +54,8 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    
 
 
 

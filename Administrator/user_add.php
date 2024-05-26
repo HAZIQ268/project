@@ -51,6 +51,7 @@ $result = mysqli_query($conn , $sql);
                         </div>
                         </div>
                         </div>
+                        
 
 <?php
             if (isset($_POST['submit'])) {
@@ -58,7 +59,7 @@ $result = mysqli_query($conn , $sql);
             $username =$_POST['username'];
             $password =$_POST['password'];
 
-            $sql="insert into users (username,password,Roleid_FK) values ('$username','$password','$roleId')";
+            $sql="insert into users (username,password,roleId) values ('$username','$password','$Roleid_FK')";
             $result=mysqli_query($conn,$sql);
 
             echo 

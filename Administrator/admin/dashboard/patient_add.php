@@ -32,7 +32,7 @@ include("../../../Administrator/header.php");
                             <input type="email" name="patient_email" class="form-control" id="inputEmail" placeholder="medical@bm.com">
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-12">
+                    <div class="col-sm-12 col-lg-12">
                         <div class="form-group">
                             <label for="addreSs">Address</label>
                             <textarea class="form-control" name="patient_address" id="addreSs" rows="3" placeholder="Current Address"></textarea>

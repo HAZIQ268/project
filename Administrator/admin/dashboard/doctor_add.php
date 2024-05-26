@@ -1,5 +1,8 @@
 <?php
 include("../../../Administrator/header.php");
+
+
+
 ?>
 <!-- Content wrapper start -->
 <div class="content-wrapper">
@@ -13,8 +16,8 @@ include("../../../Administrator/header.php");
             </div>
             <div class="card-body">
                 <div class="row gutters">
-                    <div class="col-sm-4 col-12">
-                    <div class="form-group col-md-12">
+                    <div class="col-sm-12 col-lg-12">
+                    <form action="" method="POST">
                                 <label>State</label>
                                 <select id="inputState" name="c_id" class="form-control">
                                     <?php
@@ -28,35 +31,34 @@ include("../../../Administrator/header.php");
                                     <?php  } ?>
 
                                 </select>
-                            </div>
-                        <div class="form-group">
-                            <form action="" method="post">
+                                </div>
+                        <div class="form-group col-sm-12 col-lg-12">
                             <label for="fullName">Name</label>
-                            <input type="text" name="doctor_name" class="form-control" id="fullName" placeholder="Srinu">
+                            <input type="text" name="name" class="form-control" id="fullName" placeholder="Srinu">
                         </div>
-                    </div>
-                    <div class="col-sm-4 col-12">
+                   
+                    <div class="col-sm-12 col-lg-6">
                         <div class="form-group">
                             <label for="inputEmail">Email</label>
-                            <input type="email" name="doctor_email" class="form-control" id="inputEmail" placeholder="medical@bm.com">
+                            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="medical@bm.com">
                         </div>
                     </div>
-                    <div class="col-sm-4 col-12">
+                    <div class="col-sm-12 col-lg-6">
                         <div class="form-group">
                             <label for="phoNe">Phone Number</label>
-                            <input type="number" name="doctor_number" class="form-control" id="phoNe" placeholder="Phone">
+                            <input type="number" name="phone_number" class="form-control" id="phoNe" placeholder="Phone">
                         </div>
                     </div>
-                    <div class="col-sm-4 col-lg-12">
+                    <div class="col-sm-12 col-lg-12">
                         <div class="form-group">
                             <label for="inputEmail">Specialization</label>
-                            <input type="text" name="doctor_spec" class="form-control" id="inputEmail" placeholder="medical@bm.com">
+                            <input type="text" name="specialization" class="form-control" id="inputEmail" placeholder="medical@bm.com">
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-12">
+                    <div class="col-sm-12 col-lg-12">
                         <div class="form-group">
                             <label for="addreSs">Address</label>
-                            <textarea class="form-control" name="doctor_address" id="addreSs" rows="3" placeholder="Current Address"></textarea>
+                            <textarea class="form-control" name="address" id="addreSs" rows="3" placeholder="Current Address"></textarea>
                         </div>
                     </div>
                     
@@ -86,20 +88,20 @@ include("../../../Administrator/header.php");
 <?php
 
 if(isset($_POST['submit'])){
-    $cityId = $_POST['c_id'];
-    $doctor_name = $_POST['doctor_name'];
-    $doctor_address = $_POST['doctor_address'];
-    $doctor_number = $_POST['doctor_number'];
-    $doctor_spec = $_POST['doctor_spec'];
-    $doctor_email = $_POST['doctor_email'];
+    $c_id = $_POST['c_id'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
+    $address = $_POST['address'];
+    $specialization = $_POST['specialization'];
 
-    $sql = "insert into doctors (doctor_name,doctor_address,doctor_number,doctor_email,cityId,doctor_spec) values
+    $sql = "insert into (name,address,phone_number,email,c_id,specialization) values
     ('$name','$address','$phone_number','$email','$Cityid_FK','$specialization')";
     $result = mysqli_query($conn, $sql);
 
     echo "<script>
     
-    alert('Your Record Has Been Added!')
+    alert('Your Record Has Been Inserted!')
     window.location.href='doctor_show.php'
     </script>";
 }

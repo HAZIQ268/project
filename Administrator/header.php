@@ -165,7 +165,7 @@ include("connection.php");
 				<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active-page" href="index.php">
+							<a class="nav-link" href="index.php">
 								<i class="icon-devices_other nav-icon"></i>
 								Dashboard
 							</a>
@@ -236,6 +236,23 @@ include("connection.php");
 						</li>
 					</ul>
 						</div>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"></i>
+								<br>
+								Cities
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+								<li>
+									<a class="dropdown-item" href="./admin/dashboard/city_add.php">City Add</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="./admin/dashboard/city_show.php">City Show</a>
+								</li>
+								
+							</ul>
+						</li>
 						
 							
 						
@@ -249,16 +266,16 @@ include("connection.php");
 							</a>
 							<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="loginDropdown">
 								<li>
-									<a class="dropdown-item" href="login.php">Login</a>
+								<a class="dropdown-item" href="./admin/dashboard/login.php">Login</a>
 								</li>
 								<li>
-									<a class="dropdown-item" href="user_register.php">Signup</a>
+									<a class="dropdown-item" href="./admin/dashboard/user_register.php">Signup</a>
 								</li>
 								<li>
 									<a class="dropdown-item" href="forgot-pwd.html">Forgot Password</a>
 								</li>
 								<li>
-									<a class="dropdown-item" href="newsletter.html">Newsletter</a>
+									<a class="dropdown-item" href="./admin/dashboard/login.php">Logout</a>
 								</li>
 								<li>
 									<a class="dropdown-item" href="error.html">404</a>

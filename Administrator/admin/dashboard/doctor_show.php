@@ -2,10 +2,8 @@
 
 include("../../../Administrator/header.php");
 
-
-
-$sql = "select * from doctors";
-$result = mysqli_query($conn , $sql);
+$sql="select doctors .*,cities.City_Name from cities join doctors on cities.id =doctors.Cityid_FK";
+$result=mysqli_query($conn,$sql);
 
 ?>
 
@@ -35,7 +33,7 @@ $result = mysqli_query($conn , $sql);
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title text-center">Patients Record</h4>
+                                <h4 class="card-title text-center">Doctor's Record's</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -43,6 +41,7 @@ $result = mysqli_query($conn , $sql);
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
+                                                <th>City Names</th>
                                                 <th>Names</th>
                                                 <th>Email</th>
                                                 <th>Phone Number</th>
@@ -60,10 +59,12 @@ $result = mysqli_query($conn , $sql);
                                                 ?>
 
                                                     <td><?php echo $rows['id'] ?></td>
-                                                    <td><?php echo $rows['doctor_name'] ?></td>
-                                                    <td><?php echo $rows['doctor_address'] ?></td>
+                                                    <td><?php echo $rows['City_Name'] ?></td>
+                                                    <td><?php echo $rows['name'] ?></td>
+                                                    <td><?php echo $rows['email'] ?></td>
                                                     <td><?php echo $rows['phone_number'] ?></td>
-                                                    <td><?php echo $rows['doctor_email'] ?></td>
+                                                    <td><?php echo $rows['specialization'] ?></td>
+                                                    <td><?php echo $rows['address'] ?></td>
                                                     <td><a href="doctor_update.php?id=<?php echo $rows
                                                     ['id']?>"><i class="bi bi-pencil-square"></i>Edit</a></td>
                                                     <td><a href="doctor_delete.php?id=<?php echo $rows

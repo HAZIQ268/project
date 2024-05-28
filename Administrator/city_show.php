@@ -33,7 +33,7 @@ $result = mysqli_query($conn , $sql);
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Basic</h4>
+                                <h4 class="card-title">City Names</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

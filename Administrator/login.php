@@ -46,10 +46,10 @@
 								</a>
 								<h5>Welcome back,<br />Please Login to your Account.</h5>
 								<div class="form-group">
-									<input type="text" name="email" class="form-control" placeholder="Email Address" />
+									<input type="text" name="email" class="form-control" placeholder="Enter Your Email" />
 								</div>
 								<div class="form-group">
-									<input type="password" name="password" class="form-control" placeholder="Password" />
+									<input type="password" name="password" class="form-control" placeholder="Enter Your Password" />
 								</div>
 								<div class="actions">
 									<button type="submit" name="submit" class="btn btn-info" href="index.php">Login</button>
@@ -85,7 +85,7 @@
         if($result->num_rows>0){
             while($rows =mysqli_fetch_assoc($result)){
                 echo "<script>
-                swal('Good job!', 'You clicked the button!', 'success')
+                swal('Good job!', 'You Are Login!', 'success')
                 setTimeout(function(){
                     window.location.href='index.php';
                 },3000)

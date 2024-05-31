@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
     $patient_email = $_POST['patient_email'];
 
     $sql = "insert into patients (patient_name,patient_adress,patient_number,patient_email) values
-    ('$patient_name','$patient_adress','$patient_number','$patient_email')";
+    ('$patient_name','$patient_address','$patient_number','$patient_email')";
     $result = mysqli_query($conn, $sql);
 
     echo "<script>

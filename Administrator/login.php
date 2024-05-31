@@ -42,7 +42,7 @@
 						<div class="login-screen">
 							<div class="login-box">
 								<a href="#" class="login-logo">
-									Royal Hospitals
+									Care Hospitals
 								</a>
 								<h5>Welcome back,<br />Please Login to your Account.</h5>
 								<div class="form-group">
@@ -54,11 +54,8 @@
 								<div class="actions">
 									<button type="submit" name="submit" class="btn btn-info" href="index.php">Login</button>
 								</div>
-								<hr>
-								<div class="m-0">
-									<span class="additional-link">No account? <a href="user_register.php"
-											class="btn btn-secondary">Signup</a></span>
-								</div>
+							
+								
 							</div>
 						</div>
 					</div>

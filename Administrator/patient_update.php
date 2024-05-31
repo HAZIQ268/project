@@ -29,7 +29,7 @@ $rows = mysqli_fetch_assoc($result);
                         <div class="form-group">
                             <form action="" method="post">
                             <label for="fullName">Name</label>
-                            <input type="text" name="patient_name" class="form-control" id="fullName" placeholder="Enter Your Name">
+                            <input type="text" name="patient_name"  class="form-control" id="fullName" placeholder="Enter Your Name">
                         </div>
                     </div>
                     <div class="col-sm-4 col-12">
@@ -70,9 +70,8 @@ $rows = mysqli_fetch_assoc($result);
 
 </div>
 <!-- *************
-************ Main container end *************
+*********** Main container end *************
 ************* -->
-
 
 <?php
 

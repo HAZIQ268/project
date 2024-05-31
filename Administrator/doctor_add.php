@@ -2,8 +2,6 @@
 include("header.php");
 
 
-$sql = "select * from cities";
-$result = mysqli_query($conn, $sql);
 ?>
 <!-- Content wrapper start -->
 <div class="content-wrapper">
@@ -23,6 +21,10 @@ $result = mysqli_query($conn, $sql);
                             <label>State</label>
                             <select id="inputState" name="city_id" class="form-control">
                                 <?php
+                                
+                                $sql = "select * from cities";
+                        
+                                $result = mysqli_query($conn, $sql);
                                 while ($rows = mysqli_fetch_assoc($result)) {
                                 ?>
                                     <option value="<?php echo $rows['id'] ?>"><?php echo $rows['City_Name'] ?></option>
@@ -91,7 +93,7 @@ if (isset($_POST['submit'])) {
     $city_id = $_POST['city_id'];
 
 
-    $sql="insert into doctors (doctor_name,doctor_email,phone_number,doctor_special,doctor_address,city_id) values ('$doctor_name', '$doctor_email', '$phone_number', '$doctor_special', '$doctor_address', '$Cityid_FK')";
+    $sql="insert into doctors (name,address,phone_number,email,Cityid_FK,specialization) values ('$doctor_name', '$doctor_address', '$phone_number', '$doctor_email', '$city_id', '$doctor_special')";
     $result = mysqli_query($conn, $sql);
 
     echo "<script>

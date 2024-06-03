@@ -148,19 +148,20 @@ include("../../Administrator/connection.php");
 
                                 while ($rows = mysqli_fetch_assoc($result)) {
                                 ?>
-                                    <option value="<?php echo $rows['id'] ?>" ><?php echo $rows['doctor_special'] ?></option>
+                               
+                                    <option value="<?php echo $rows['id'] ?>" ><?php echo $rows['specialization'] ?></option>
                                 <?php  } ?>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <select class="form-select bg-light border-0" style="height: 55px;">
                                         <?php
-                                        $sql="select * from patients";
+                                        $sql="select * from doctors";
                                         $result = mysqli_query($conn, $sql);
 
                                         while ($rows =mysqli_fetch_assoc($result)) {
                                             ?>
-                                            <option value="<?php echo $rows['id'] ?>"><?php echo $rows[''] ?></option>
+                                            <option value="<?php echo $rows['id'] ?>"><?php echo $rows['name'] ?></option>
                                             
                                        <?php } ?>
                                     </select>

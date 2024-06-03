@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glassmorphism Login Form | CodingNepal</title>
+  <title></title>
   <link rel="stylesheet" href="style.css">
 </head>
 <style>
@@ -153,27 +153,18 @@ button:hover {
 </style>
 <body>
   <div class="wrapper">
-    <form action="#">
-      <h2>Login</h2>
+    <h2>Login</h2>
+    <form action="" method="post">
         <div class="input-field">
-        <input type="text" required>
-        <label>Enter your email</label>
+        <input type="text" required name="username">
+        <label>Enter your username</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
+        <input type="password" required name="password"> 
         <label>Enter your password</label>
       </div>
-      <div class="forget">
-        <label for="remember">
-          <input type="checkbox" id="remember">
-          <p>Remember me</p>
-        </label>
-        <a href="#">Forgot password?</a>
-      </div>
-      <button type="submit">Log In</button>
-      <div class="register">
-        <p>Don't have an account? <a href="#">Register</a></p>
-      </div>
+      <button type="submit" href="index.php" name="submit">Log In</button>
+      
     </form>
   </div>
   <script>
@@ -184,13 +175,10 @@ button:hover {
 
 <?php 
     if(isset($_POST['submit'])){
-        $email = $_POST['email'];
+        $username = $_POST['username'];
         $password = $_POST['password'];
-        $sql = "select * from user_register where email = '$email' and password = '$password'";
+        $sql = "select * from doctor_login where username = '$username' and password = '$password'";
         $result =mysqli_query($conn , $sql);
-        echo "<pre>";
-        print_r($result);
-        echo "</pre>";
         if($result->num_rows>0){
             while($rows =mysqli_fetch_assoc($result)){
                 echo "<script>
@@ -210,7 +198,7 @@ button:hover {
               });
 
               setTimeout(function(){
-                window.location.href='login.php';
+                window.location.href='index.php';
               },3000)
         </script>";
         }

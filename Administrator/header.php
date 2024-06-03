@@ -194,9 +194,9 @@ include("connection.php");
 								Patient Book
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-								<li>
+								<!-- <li>
 									<a class="dropdown-item" href="patient_add.php">Patient Add</a>
-								</li>
+								</li> -->
 								<li>
 									<a class="dropdown-item" href="patient_show.php">Patient Show</a>
 								</li>

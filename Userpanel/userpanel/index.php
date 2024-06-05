@@ -1,5 +1,6 @@
 <?php
 include("header.php");
+session_start();
 ?>
 <!-- About Start -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -87,7 +88,14 @@ include("header.php");
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
+                                    <?php 
+                                    if (isset($_SESSION['username'])){
+                                        echo ' <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>';
+                                    }
+                                    else{
+                                        echo '<a class="btn btn-dark w-100 py-3" href="login.php">Make Appointment</a>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </form>

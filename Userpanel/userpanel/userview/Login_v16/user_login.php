@@ -1,7 +1,12 @@
+<?php
+include("../../../../Administrator/connection.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V16</title>
+	<title>User Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -26,6 +31,9 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
 	
@@ -35,22 +43,24 @@
 				<span class="login100-form-title p-b-41">
 					Account Login
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5">
+				<form method="post" class="login100-form validate-form p-b-33 p-t-5">
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="User name">
+						<input class="input100" type="email" name="patient_email" placeholder="Enter Your Email">
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="patient_password" placeholder="Password">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
 					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
-							Login
-						</button>
+					<div class="actions">
+									<button type="submit" name="submit" class="btn btn-info" href="index.php">Login</button>
+								</div>
+							
+					
 					</div>
 
 				</form>
@@ -80,3 +90,37 @@
 
 </body>
 </html>
+
+<?php 
+    if(isset($_POST['submit'])){
+        $patient_email = $_POST['email'];
+        $patient_password = $_POST['password'];
+        $sql = "select * from patient_register where email = '$patient_email' and password = '$patient_password'";
+        $result =mysqli_query($conn , $sql);
+        if($result->num_rows>0){
+            while($rows =mysqli_fetch_assoc($result)){
+                echo "<script>
+                swal('Good job!', 'You Are Login!', 'success')
+                setTimeout(function(){
+                    window.location.href='../../../userpanel/index.php';
+                },3000)
+                </script>";
+            }
+        }
+        else{
+            echo "<script>
+            swal({
+                title: 'Auto close alert!',
+                text: 'I will close in 2 seconds.',
+                timer: 2000
+              });
+
+              setTimeout(function(){
+                window.location.href='user_login.php';
+              },3000)
+        </script>";
+        }
+
+    }
+    
+?> 

@@ -167,23 +167,23 @@ include("../../Administrator/connection.php");
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text"
+                                        <input type="date"
                                             class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Appointment Date" name="appointment_date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                                            placeholder="Appointment Date" name="appointment_date"  data-toggle="datetimepicker" style="height: 55px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="time" id="time1" data-target-input="nearest">
-                                        <input type="text"
+                                        <input type="time"
                                             class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Appointment Time" name="appointment_time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
+                                            placeholder="Appointment Time" name="appointment_time"  data-toggle="datetimepicker" style="height: 55px;">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -219,14 +219,15 @@ include("../../Administrator/connection.php");
 
 if (isset($_POST['submit'])) {
     
-    
+    $name = $_POST['name'];
+    $email = $_POST['email'];
     $appointment_date = $_POST['appointment_date'];
     $appointment_time = $_POST['appointment_time'];
     $Patientid_FK = $_POST['Patientid_FK'];
     $Doctorid_FK = $_POST['Doctorid_FK'];
+    
 
-
-    $sql="insert into appointments (appointment_date,appointment_time,Patientid_FK,Doctorid_FK) values ('$appointment_date', '$appointment_time', '$Patientid_FK', '$Doctorid_FK')";
+    $sql="insert into appointments (appointment_date,appointment_time,Patientid_FK,Doctorid_FK) values ('$name', '$email', '$appointment_date', '$appointment_time', '$Patientid_FK', '$Doctorid_FK', )";
     $result = mysqli_query($conn, $sql);
 
     echo "<script>

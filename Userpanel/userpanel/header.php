@@ -1,5 +1,6 @@
 <?php
 include("../../Administrator/connection.php");
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +102,14 @@ include("../../Administrator/connection.php");
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
             <a href="appointment.php" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"></button>
-            <a href=".php" class="btn btn-primary py-2 px-4 ms-3">Login</a>
+          <?php  if (isset($_SESSION['username'])){
+            echo ' <a href=".php" class="btn btn-primary py-2 px-4 ms-3">Log Out</a>';
+          }
+          else{
+            echo ' <a href=".php" class="btn btn-primary py-2 px-4 ms-3">Login</a>';
+          }
+          ?>
+           
         </div>
     </nav>
     <!-- Navbar End -->

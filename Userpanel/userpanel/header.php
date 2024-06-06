@@ -102,11 +102,11 @@ session_start();
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
             <a href="appointment.php" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"></button>
-          <?php  if (isset($_SESSION['username'])){
+          <?php  if (isset($_SESSION['login'])){
             echo ' <a href=".php" class="btn btn-primary py-2 px-4 ms-3">Log Out</a>';
           }
           else{
-            echo ' <a href=".php" class="btn btn-primary py-2 px-4 ms-3">Login</a>';
+            echo ' <a href="doctor login.php" class="btn btn-primary py-2 px-4 ms-3">Login</a>';
           }
           ?>
            

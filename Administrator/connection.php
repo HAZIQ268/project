@@ -1,6 +1,6 @@
 <?php
 
- $conn = new mysqli ("localhost" ,"root","","care");
+ $conn = new mysqli ("localhost" ,"root","","care project");
 
  if (!$conn) {
     die("connection failed");

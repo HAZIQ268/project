@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2024 at 10:27 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Generation Time: Jun 07, 2024 at 02:50 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `care`
+-- Database: `care project`
 --
 
 -- --------------------------------------------------------
@@ -98,6 +98,33 @@ CREATE TABLE `doctors` (
   `Cityid_FK` int(11) NOT NULL,
   `specialization` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `doctors`
+--
+
+INSERT INTO `doctors` (`id`, `name`, `address`, `phone_number`, `email`, `Cityid_FK`, `specialization`) VALUES
+(4, 'Select A Doctor', '', 0, '', 8, 'Select A Service'),
+(5, 'Dr. Sameer', 'North Nazmabad', 2147483647, 'sameer@gmail.com', 8, 'Cardiology');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctor_login`
+--
+
+CREATE TABLE `doctor_login` (
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `doctor_login`
+--
+
+INSERT INTO `doctor_login` (`email`, `password`) VALUES
+('abc@gmail.com', 'abc123'),
+('abc@gmail.com', 'abc123');
 
 -- --------------------------------------------------------
 
@@ -252,7 +279,7 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `patients`

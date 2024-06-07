@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2024 at 02:50 PM
+-- Generation Time: Jun 07, 2024 at 03:58 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -104,8 +104,8 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `name`, `address`, `phone_number`, `email`, `Cityid_FK`, `specialization`) VALUES
-(4, 'Select A Doctor', '', 0, '', 8, 'Select A Service'),
-(5, 'Dr. Sameer', 'North Nazmabad', 2147483647, 'sameer@gmail.com', 8, 'Cardiology');
+(5, 'Dr. Sameer', 'North Nazmabad', 2147483647, 'sameer@gmail.com', 8, 'Cardiology'),
+(7, 'Dr. Haziq', 'North Nazmabad', 2147483647, 'haziq@gmail.com', 8, 'Dermatology');
 
 -- --------------------------------------------------------
 
@@ -279,7 +279,7 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `patients`

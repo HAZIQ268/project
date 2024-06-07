@@ -146,7 +146,7 @@
                                             
 
 <!-- <div class="col-sm-9 text-secondary">
-    <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+    <input type="text" class="form-control" value="Bay Area, San Francisco, CA"
 </div>
 </div> -->
 

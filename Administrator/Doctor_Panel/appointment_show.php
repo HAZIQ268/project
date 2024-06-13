@@ -44,7 +44,7 @@ include("header.php");
                                                     <td><?php echo $rows['appointment_date'] ?></td>
                                                     <td><?php echo $rows['appointment_time'] ?></td>
                                                     <td><?php echo $rows['Patientid_FK'] ?></td>
-                                                    <td><?php echo $rows['Doctorid_FK'] ?></td>
+                                                    <td><?php echo $rows['name'] ?></td>
 
                                             </tr>
                                                <?php } ?>

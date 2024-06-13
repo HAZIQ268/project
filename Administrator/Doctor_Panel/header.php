@@ -178,49 +178,13 @@ include("../../Administrator/connection.php");
 							</a>
 						
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"></i>
-								<br>
-								Patient Book
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-								<!-- <li>
-									<a class="dropdown-item" href="patient_add.php">Patient Add</a>
-								</li> -->
-								<li>
-									<a class="dropdown-item" href="patient_show.php">Patient Show</a>
-								</li>
-								
-							</ul>
-						</li>
+						
+						
+					
 						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link " href="doctor_add.php">
-							<i class="bi fa-xs fa-sm fa-lg bi-person-fill-add"></i>
-							<br>
-								Add Doctors
-							</a>
-						</li>
-					</ul>
-						</div>
-						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link " href="doctor_show.php">
-							<i class="fa fa-xs fa-sm fa-lg fa-user-md" aria-hidden="true"></i>
-							<br>
-							 Doctor's Records
-							</a>
-						</li>
-					</ul>
-						</div>
-						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link " href="">
+							<a class="nav-link " href="appointment_show.php">
 							<i class="bi fa-xs fa-sm fa-lg bi-alarm"></i>
 							<br>
 							 Appointment
@@ -228,23 +192,8 @@ include("../../Administrator/connection.php");
 						</li>
 					</ul>
 						</div>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"></i>
-								<br>
-								Cities
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-								<li>
-									<a class="dropdown-item" href="city_add.php">City Add</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="city_show.php">City Show</a>
-								</li>
-								
-							</ul>
-						</li>
+					
+					
 						
 						</li>
 					

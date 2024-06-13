@@ -1,6 +1,5 @@
 <?php
 include("../../Administrator/connection.php");
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,15 +84,15 @@ session_start();
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
+                <a href="index.php" class="nav-item nav-link ">Home</a>
+                <a href="about.php" class="nav-item nav-link ">About</a>
+                <a href="service.php" class="nav-item nav-link ">Service</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="team.html" class="dropdown-item">Our Dentist</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="Pricing.php" class="dropdown-item">Pricing Plan</a>
+                        <a href="team.php" class="dropdown-item">Our Doctors</a>
+                        <!-- <a href="testimonial.php" class="dropdown-item">Testimonial</a> -->
                         <a href="appointment.php" class="dropdown-item">Appointment</a>
                     </div>
                 </div>
@@ -201,7 +200,7 @@ session_start();
                     <div class="bg-secondary d-flex flex-column p-5" style="height: 300px;">
                         <h3 class="text-white mb-3">Make Appointment</h3>
                         <p class="text-white">Ipsum erat ipsum dolor clita rebum no rebum dolores labore, ipsum magna at eos et eos amet.</p>
-                        <h2 class="text-white mb-0">+012 345 6789</h2>
+                        <h4 class="text-white mb-0">+012 345 6789</h4>
                     </div>
                 </div>
             </div>

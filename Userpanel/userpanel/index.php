@@ -136,10 +136,10 @@ include("header.php");
                         </div>
                         <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
                             <div class="rounded-top overflow-hidden">
-                                <img class="img-fluid" src="img/service-2.jpg" alt="">
+                                <img class="img-fluid" src="https://www.associatedderm.net/wp-content/uploads/2021/10/qualified-dermatologist-in-sterile-gloves-examinin-2021-09-03-14-17-40-utc-1-scaled.jpg" alt="">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
-                                <h5 class="m-0">Dental Implants</h5>
+                                <h5 class="m-0">Dermatologist</h5>
                             </div>
                         </div>
                     </div>
@@ -150,18 +150,18 @@ include("header.php");
                     <div class="row g-5">
                         <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.3s">
                             <div class="rounded-top overflow-hidden">
-                                <img class="img-fluid" src="img/service-3.jpg" alt="">
+                                <img class="img-fluid" src="https://www.pediaclic.org/wp-content/uploads/2022/02/Pediatrics.jpg" alt="">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
-                                <h5 class="m-0">Dental Bridges</h5>
+                                <h5 class="m-0">Pediatrics</h5>
                             </div>
                         </div>
                         <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                             <div class="rounded-top overflow-hidden">
-                                <img class="img-fluid" src="img/service-4.jpg" alt="">
+                                <img class="img-fluid" src="https://nimaaya.com/wp-content/uploads/2023/09/Intensive-Care-and-Anesthesiology.jpg" alt="">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
-                                <h5 class="m-0">Teeth Whitening</h5>
+                                <h5 class="m-0">Anesthesiology</h5>
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@ include("header.php");
                     <div class="offer-text text-center rounded p-5">
                         <h1 class="display-5 text-white">Save 30% On Your First Dental Checkup</h1>
                         <p class="text-white mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod diam duo lorem magna sit dolore sed et.</p>
-                        <a href="appointment.html" class="btn btn-dark py-3 px-5 me-3">Appointment</a>
+                        <a href="appointment.php" class="btn btn-dark py-3 px-5 me-3">Appointment</a>
                         <a href="" class="btn btn-light py-3 px-5">Read More</a>
                     </div>
                 </div>
@@ -195,6 +195,20 @@ include("header.php");
         </div>
     </div>
     <!-- Offer End -->
+
+
+ <!-- Hero Start -->
+ <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Pricing</h1>
+                <a href="" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">Pricing</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
 
 
     <!-- Pricing Start -->

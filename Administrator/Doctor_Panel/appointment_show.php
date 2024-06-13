@@ -3,9 +3,9 @@ include("../../Administrator/connection.php");
 
 include("header.php");
 
-    $sql="";
-    $result =mysqli_query($conn,$sql);
-
+    $sql = "select * from appointments";
+    $result=mysqli_query($conn,$sql);
+    
 ?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -33,11 +33,11 @@ include("header.php");
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php 
-                                              while($rows = mysqli_fetch_assoc($result)){
-                                            ?>
+ 
                                                   <tr>
-
+                                                  <?php   
+                                                while($rows = mysqli_fetch_assoc($result)){
+                                          ?>
                                                   <td><?php echo $rows['id'] ?></td>
                                                     <td><?php echo $rows['name'] ?></td>
                                                     <td><?php echo $rows['email'] ?></td>
@@ -48,7 +48,6 @@ include("header.php");
 
                                             </tr>
                                                <?php } ?>
-                                               
                                         </tbody>
                                     </table>
                                 </div>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2024 at 03:58 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jun 13, 2024 at 10:29 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `care project`
+-- Database: `health_care`
 --
 
 -- --------------------------------------------------------
@@ -29,6 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `appointments` (
   `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `appointment_date` date NOT NULL,
   `appointment_time` time NOT NULL,
   `Patientid_FK` int(11) NOT NULL,
@@ -213,7 +215,13 @@ INSERT INTO `user_register` (`username`, `email`, `password`) VALUES
 ('haziq', 'mhaziqhabib805@gmail.com', 'haziq123'),
 ('alex', 'alex@gmail.com', 'alex123'),
 ('haziq', 'mhaziqhabib805@gmail.com', 'haziq123'),
-('hussain', 'hussain@gmail.com', 'hussain123');
+('hussain', 'hussain@gmail.com', 'hussain123'),
+('xyz', 'xyz@gmail.com', 'xyz123'),
+('Dr. Sameer', 'sameer@gmail.com', 'sameer123'),
+('Dr. jameel', 'jameel@gmail.com', 'jamneel123'),
+('Dr. Nasir', 'nasir@gmail.com', 'nasir123'),
+('Dr. Jami', 'jami@gmail.com', 'jami123'),
+('Dr. Ayyan', 'ayyan@gmail.com', 'ayyan123');
 
 --
 -- Indexes for dumped tables

@@ -10,7 +10,7 @@ include("header.php");
 				<!-- Page header start -->
 				<div class="page-header">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item active">Hospital Dashboard</li>
+						<li class="breadcrumb-item active">Admin Dashboard</li>
 					</ol>
 					<div class="site-award">
 						<img src="img/award.svg" alt="Hospital Dashboards"> Best Hospital

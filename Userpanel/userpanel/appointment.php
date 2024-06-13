@@ -63,7 +63,7 @@ include("../../Administrator/connection.php");
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-primary"><i class="fa fa-stethoscope me-2"></i>Care</h1>
+            <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -137,7 +137,7 @@ include("../../Administrator/connection.php");
                 <div class="col-lg-6">
                     <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
                         <h1 class="text-white mb-4">Make Appointment</h1>
-                        <form method="post">
+                        <form method="POST">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <select class="form-select bg-light border-0" style="height: 55px;" id="inputState" name="city_id" class="form-control">
@@ -223,11 +223,10 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $appointment_date = $_POST['appointment_date'];
     $appointment_time = $_POST['appointment_time'];
-    $Patientid_FK = $_POST['Patientid_FK'];
-    $Doctorid_FK = $_POST['Doctorid_FK'];
+   
     
 
-    $sql="insert into appointments (appointment_date,appointment_time,Patientid_FK,Doctorid_FK) values ('$name', '$email', '$appointment_date', '$appointment_time', '$Patientid_FK', '$Doctorid_FK', )";
+    $sql="insert into appointments (name,email,appointment_date,appointment_time) values ('$name', '$email', '$appointment_date', '$appointment_time')";
     $result = mysqli_query($conn, $sql);
 
     echo "<script>

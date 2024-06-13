@@ -95,10 +95,10 @@ $rows = mysqli_fetch_assoc($result);
 <?php
 
 if (isset($_POST['update'])) {
-    $doctor_name = $_POST['doctor_name'];
-    $doctor_email = $_POST['doctor_email'];
+    $name = $_POST['doctor_name'];
+    $email = $_POST['doctor_email'];
     $phone_number = $_POST['phone_number'];
-    $doctor_special = $_POST['doctor_special'];
+    $specialization = $_POST['doctor_special'];
     $doctor_address = $_POST['doctor_address'];
     $city_id = $_POST['city_id'];
 

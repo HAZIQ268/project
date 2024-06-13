@@ -123,13 +123,10 @@ include("connection.php");
 											<div class="header-user">
 												<img src="img/user11.png" alt="Medical Dashboards" />
 											</div>
-											<h5>Nélson Romyo</h5>
+											<h5></h5>
 											<p>Admin</p>
 										</div>
-										<a href="hospital-add-doctor.html"><i class="icon-user1"></i> My Profile</a>
-										<a href="account-settings.html"><i class="icon-settings1"></i> Account Settings</a>
-										<a href="hospital-reviews.html"><i class="icon-activity"></i> Activity Logs</a>
-										<a href=""><i class="icon-log-out1"></i> Sign Out</a>
+										<a href="login.php"><i class="icon-log-out1"></i> Sign Out</a>
 									</div>
 								</div>
 							</li>
@@ -170,38 +167,20 @@ include("connection.php");
 								Dashboard
 							</a>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="doctoRs" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								<i class="bi fa-xs fa-sm fa-lg bi-person-square"></i>
-								<br>
-								Profile
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="doctoRs">
+						
 							
-								<li>
-									<a class="dropdown-item" href="hospital-reviews.html">Doctor</a>
-								</li>
 					
 							
-							</ul>
-						</li>
+						
+						
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+							<a class="nav-link " href="patient_show.php" id="pagesDropdown" role="button" 
 								aria-haspopup="true" aria-expanded="false">
-								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"></i>
+								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"  ></i>
 								<br>
 								Patient Book
 							</a>
-							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-								<!-- <li>
-									<a class="dropdown-item" href="patient_add.php">Patient Add</a>
-								</li> -->
-								<li>
-									<a class="dropdown-item" href="patient_show.php">Patient Show</a>
-								</li>
-								
-							</ul>
+							
 						</li>
 						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
 					<ul class="navbar-nav">
@@ -228,32 +207,27 @@ include("connection.php");
 						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link " href="">
-							<i class="bi fa-xs fa-sm fa-lg bi-alarm"></i>
+							<a class="nav-link " href="city_add.php">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
 							<br>
-							 Appointment
+							 City Add
 							</a>
 						</li>
 					</ul>
 						</div>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"></i>
-								<br>
-								Cities
+						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link " href="city_show.php">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+							
+							<br>
+							 City Show
 							</a>
-							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-								<li>
-									<a class="dropdown-item" href="city_add.php">City Add</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="city_show.php">City Show</a>
-								</li>
-								
-							</ul>
 						</li>
-						
+					</ul>
+						</div>
+					
 						</li>
 					
 						

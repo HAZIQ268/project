@@ -132,7 +132,7 @@
 <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-9 text-secondary d-md-flex justify-content-md-end me-md-2">
-        <a class=" btn btn-primary" href="doctor_profile_edit.php">Edit <i class="bi bi-pencil-square"></i></a>
+        <a class=" btn btn-primary" href="profile_update.php">Edit <i class="bi bi-pencil-square"></i></a>
     </div>  
 <div class="row mb-3">
 <div class="col-sm-3">

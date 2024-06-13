@@ -1,227 +1,256 @@
 <?php
 include("../../Administrator/connection.php");
-session_start();
+
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>Care - Clinic Website</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+		<!-- Meta -->
+		<meta name="description" content="Responsive Bootstrap Dashboards">
+		<meta name="author" content="Bootstrap Gallery">
+		<link rel="shortcut icon" href="img/favicon.svg" />
+		
+		<!-- fontawesome icon link  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<title>Care Admin</title>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<!-- *************
+			************ Common Css Files *************
+			************ -->
+		<!-- Bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+		<!-- Icomoon Font Icons css -->
+		<link rel="stylesheet" href="fonts/style.css">
+	
+		<!-- Main css -->
+		<link rel="stylesheet" href="css/main.min.css">
+        <!-- bootstrap ico -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<!-- *************
+			************ Vendor Css Files *************
+		************ -->
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+	</head>
+<style>
+	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+</style>
+	<body>
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+		<!-- Header start -->
+		<header class="header">
+			<div class="container-fluid">
 
-<body>
-    <!-- Spinner Start -->
-    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-dark m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-secondary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div> -->
-    <!-- Spinner End -->
+				<!-- Row start -->
+				<div class="row gutters">
+					<div class="col-sm-4 col-4">
+						<a href="index.html" class="logo">Care<span>Hospitals</span></a>
+					</div>
+					<div class="col-sm-8 col-8">
 
+						<!-- Header actions start -->
+						<ul class="header-actions">
+							<li class="dropdown d-none d-sm-block">
+								<a href="#" class="contact">
+									<i class="icon-phone"></i> 012 345 6789
+								</a>
+							</li>
+							<li class="dropdown d-none d-sm-block">
+								<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+									<i class="icon-bell"></i>
+									<span class="count-label"></span>
+								</a>
+								<div class="dropdown-menu lrg" aria-labelledby="notifications">
+									<div class="dropdown-menu-header">
+										<h5>Notifications</h5>
+										<p class="m-0 sub-title">You have 5 unread notifications</p>
+									</div>
+									<ul class="header-notifications">
+										<li>
+											<a href="#" class="clearfix">
+												<div class="avatar">
+													<img src="img/user24.png" alt="Medical Admin Dashboards" />
+													<span class="notify-iocn icon-drafts text-danger"></span>
+												</div>
+												<div class="details">
+													<h6>Dr. Clive</h6>
+													<p>Appointed as a new President 2021-2024</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="avatar">
+													<img src="img/user21.png" alt="Medical Admin Dashboards" />
+													<span class="notify-iocn icon-layers text-info"></span>
+												</div>
+												<div class="details">
+													<h6>Dr. G. Levsmia</h6>
+													<p>Will be on leave on October 2nd week.</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="avatar">
+													<img src="img/user19.png" alt="Medical Admin Dashboards" />
+													<span class="notify-iocn icon-person_add text-success"></span>
+												</div>
+												<div class="details">
+													<h6>Dr. George S</h6>
+													<p>Sent new applointments list</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="dropdown">
+								<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+									<span class="user-name">Nélson Romyo</span>
+									<span class="avatar">NR<span class="status busy"></span></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
+									<div class="header-profile-actions">
+										<div class="header-user-profile">
+											<div class="header-user">
+												<img src="img/user11.png" alt="Medical Dashboards" />
+											</div>
+											<h5>Dr.Sameer</h5>
+											<p>Doctor</p>
+										</div>
+										<a href="doctor_profile.php"><i class="icon-user1"></i>My Profile</a>
+										<a href="doctor login.php"><i class="icon-log-out1"></i> Sign Out</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- Header actions end -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed </small>
-                </div>
-            </div>
-            <div class="col-md-6 text-center text-lg-end">
-                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
-                    </div>
-                    <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+					</div>
+				</div>
+				<!-- Row end -->
 
+			</div>
+		</header>
+		<!-- Header end -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="team.html" class="dropdown-item">Our Dentist</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="appointment.php" class="dropdown-item">Appointment</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="appointment.php" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
-            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"></button>
-          <?php  if (isset($_SESSION['login'])){
-            echo ' <a href=".php" class="btn btn-primary py-2 px-4 ms-3">Log Out</a>';
-          }
-          else{
-            echo ' <a href="doctor login.php" class="btn btn-primary py-2 px-4 ms-3">Login</a>';
-          }
-          ?>
-           
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Dental Treatment</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Appointment</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Dental Treatment</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Appointment</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- Carousel End -->
+		<!-- *************
+			************ Header section end *************
+		************* -->
 
 
-    <!-- Banner Start -->
-    <div class="container-fluid banner mb-5">
-        <div class="container">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-                    <div class="bg-primary d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Opening Hours</h3>
-                        <div class="d-flex justify-content-between text-white mb-3">
-                            <h6 class="text-white mb-0">Mon - Fri</h6>
-                            <p class="mb-0"> 8:00am - 9:00pm</p>
-                        </div>
-                        <div class="d-flex justify-content-between text-white mb-3">
-                            <h6 class="text-white mb-0">Saturday</h6>
-                            <p class="mb-0"> 8:00am - 7:00pm</p>
-                        </div>
-                        <div class="d-flex justify-content-between text-white mb-3">
-                            <h6 class="text-white mb-0">Sunday</h6>
-                            <p class="mb-0"> 8:00am - 5:00pm</p>
-                        </div>
-                        <a class="btn btn-light" href="">Appointment</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="bg-dark d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Search A Doctor</h3>
-                        <div class="date mb-3" id="date" data-target-input="nearest">
-                            <input type="text" class="form-control bg-light border-0 datetimepicker-input"
-                                placeholder="Appointment Date" data-target="#date" data-toggle="datetimepicker" style="height: 40px;">
-                        </div>
-                        <select class="form-select bg-light border-0 mb-3" style="height: 40px;">
-                            <option selected>Select A Service</option>
-                            <option value="1">Service 1</option>
-                            <option value="2">Service 2</option>
-                            <option value="3">Service 3</option>
-                        </select>
-                        <a class="btn btn-light" href="">Search Doctor</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="bg-secondary d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Make Appointment</h3>
-                        <p class="text-white">Ipsum erat ipsum dolor clita rebum no rebum dolores labore, ipsum magna at eos et eos amet.</p>
-                        <h2 class="text-white mb-0">+012 345 6789</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Banner Start -->
+		<div class="container-fluid">
+
+
+			<!-- Navigation start -->
+			<nav class="navbar navbar-expand-lg custom-navbar">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#royalHospitalsNavbar"
+					aria-controls="royalHospitalsNavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i></i>
+						<i></i>
+						<i></i>
+					</span>
+				</button>
+				<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="index.php">
+								<i class="icon-devices_other nav-icon"></i>
+								Dashboard
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link " href="doctor_profile.php" id="doctoRs" role="button" 
+								aria-haspopup="true" aria-expanded="false">
+								<i class="bi fa-xs fa-sm fa-lg bi-person-square"></i>
+								<br>
+								Profile
+							</a>
+						
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"></i>
+								<br>
+								Patient Book
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+								<!-- <li>
+									<a class="dropdown-item" href="patient_add.php">Patient Add</a>
+								</li> -->
+								<li>
+									<a class="dropdown-item" href="patient_show.php">Patient Show</a>
+								</li>
+								
+							</ul>
+						</li>
+						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link " href="doctor_add.php">
+							<i class="bi fa-xs fa-sm fa-lg bi-person-fill-add"></i>
+							<br>
+								Add Doctors
+							</a>
+						</li>
+					</ul>
+						</div>
+						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link " href="doctor_show.php">
+							<i class="fa fa-xs fa-sm fa-lg fa-user-md" aria-hidden="true"></i>
+							<br>
+							 Doctor's Records
+							</a>
+						</li>
+					</ul>
+						</div>
+						<div class="collapse navbar-collapse" id="royalHospitalsNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link " href="">
+							<i class="bi fa-xs fa-sm fa-lg bi-alarm"></i>
+							<br>
+							 Appointment
+							</a>
+						</li>
+					</ul>
+						</div>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<i class="bi fa-xs fa-sm fa-lg bi-person-badge"></i>
+								<br>
+								Cities
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+								<li>
+									<a class="dropdown-item" href="city_add.php">City Add</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="city_show.php">City Show</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						</li>
+					
+						
+					
+					</ul>
+				</div>
+			</nav>
+			<!-- Navigation end -->

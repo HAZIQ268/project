@@ -202,4 +202,6 @@ include("../../Administrator/connection.php");
 					</ul>
 				</div>
 			</nav>
+
+			<h3 class="text-center text-white mt-3">Doctor Dashboard</h3>
 			<!-- Navigation end -->

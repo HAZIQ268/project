@@ -93,7 +93,7 @@
 <h6 class="mb-0">Full Name</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-
+<form action="" method="post">
 <h6><?php echo $rows['name'] ?></h6>
 </div>
 </div>
@@ -133,6 +133,7 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-9 text-secondary d-md-flex justify-content-md-end me-md-2">
         <a class=" btn btn-primary" href="profile_update.php">Edit <i class="bi bi-pencil-square"></i></a>
+        </form>
     </div>  
 <div class="row mb-3">
 <div class="col-sm-3">

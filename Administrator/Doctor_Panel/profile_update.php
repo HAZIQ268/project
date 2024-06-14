@@ -1,11 +1,10 @@
 <?php
-
 include("../../Administrator/connection.php");
 
- $sql = "select * from doctors";
- $result = mysqli_query($conn , $sql);
- 
- while($rows = mysqli_fetch_assoc($result)){
+$sql = "select * from doctors";
+$result = mysqli_query($conn, $sql);
+
+    while ($rows = mysqli_fetch_assoc($result)) {
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +53,7 @@ include("../../Administrator/connection.php");
 <h4><?php echo $rows['name'] ?></h4>
 <p class="text-secondary mb-1"><?php echo $rows['specialization'] ?></p>
 <p class="text-muted font-size-sm"><?php echo $rows['address'] ?></p>
+
 </div>
 </div>
 <hr class="my-4">
@@ -91,7 +91,8 @@ include("../../Administrator/connection.php");
 <h6 class="mb-0">Full Name</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-    <input type="text" name="name" class="form-control" <?php echo $rows['name'] ?> id="">
+    <form action="" method="post">
+    <input type="text" name="name" value="<?php echo $rows['name'] ?>" class="form-control"  id="">
 </div>
 </div>
 <div class="row mb-3">
@@ -99,7 +100,7 @@ include("../../Administrator/connection.php");
 <h6 class="mb-0">Email</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="email" name="email" class="form-control" <?php echo $rows['email'] ?> id="">
+<input type="email" name="email"  value="<?php echo $rows['email']?>" class="form-control"   id="">
 
 </div>
 </div>
@@ -108,7 +109,7 @@ include("../../Administrator/connection.php");
 <h6 class="mb-0">Phone</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="number" name="phone_number" class="form-control" <?php echo $rows['phone_number'] ?> id="">
+<input type="number" name="phone_number" value="<?php echo $rows['phone_number'] ?>" class="form-control"  id="">
 
 </div>
 </div>
@@ -117,7 +118,7 @@ include("../../Administrator/connection.php");
 <h6 class="mb-0">Specialization</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="text" name="specialization" class="form-control" <?php echo $rows['specialization'] ?> id="">
+<input type="text" name="specialization" value="<?php echo $rows['specialization'] ?>" class="form-control"  id="">
 
 </div>
 </div>
@@ -126,13 +127,15 @@ include("../../Administrator/connection.php");
 <h6 class="mb-0">Address</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="text" name="address" class="form-control" <?php echo $rows['address'] ?> id="">
+<input type="text" name="address" value="<?php echo $rows['address'] ?>" class="form-control"  id="">
 </div>
 </div>
 <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-9 text-secondary d-md-flex justify-content-md-end me-md-2" name="update" type="submit">
-        <a class=" btn btn-primary"  href="profile_update.php">Update<i class="bi bi-pencil-square"></i></a>
+        <a class=" btn btn-primary"  href="doctor_profile.php">Update<i class="bi bi-pencil-square"></i></a>
+       
+
     </div>  
 <div class="row mb-3">
 <div class="col-sm-3">
@@ -165,6 +168,11 @@ include("../../Administrator/connection.php");
                 <p>Experince</p>
                 <div class="progress mb-4" style="height: 5px">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                    </form>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -175,6 +183,7 @@ include("../../Administrator/connection.php");
 </div>
 </div>
 <?php } ?>
+
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
@@ -184,21 +193,24 @@ include("../../Administrator/connection.php");
 </html>
 
 <?php
-        
-        if(isset($_POST['update'])){
-            $name = $_POST['name'];
-            $address = $_POST['address'];
-            $phone_number = $_POST['phone_number'];
-            $email = $_POST['email'];
-            $specialization= $_POST['specialization'];
-
-            $sql = "update doctors set name='$name',address='$address',phone_number='$phone_number',email='$email',specialization='$specialization' where id = $Id ";
-            $result = mysqli_query($conn , $sql);
-
-            echo "<script>
-            alert('Profile Update Successfully!');
-            window.location.href='doctor_profile.php'
-            </script>";
-        }
+     if (isset($_POST['update'])) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone_number = $_POST['phone_number'];
+        $specialization = $_POST['specialization'];
+        $address = $_POST['address'];
+    
+    
+        $sql = "update doctors set name='$name',address='$address',phone_number='$phone_number',email='$email',specialization='$specialization' ";       
+         $result = mysqli_query($conn, $sql);
+    
+    
+        echo "<script>
+                
+                alert('Author Update Successfully!');
+                window.location.href='doctor_profile.php'
+                </script>";
+    }
+    
 
     ?>

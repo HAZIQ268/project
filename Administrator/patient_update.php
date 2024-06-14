@@ -29,25 +29,25 @@ $rows = mysqli_fetch_assoc($result);
                         <div class="form-group">
                             <form action="" method="post">
                             <label for="fullName">Name</label>
-                            <input type="text" name="patient_name"  class="form-control" id="fullName" placeholder="Enter Your Name">
+                            <input type="text" name="patient_name" value="<?php echo $rows['patient_name'] ?>"  class="form-control" id="fullName" placeholder="Enter Your Name">
                         </div>
                     </div>
                     <div class="col-sm-4 col-12">
                         <div class="form-group">
                             <label for="phoNe">Phone Number</label>
-                            <input type="number" name="patient_number" class="form-control" id="phoNe" placeholder="Phone">
+                            <input type="number" name="patient_number"  value="<?php echo $rows['patient_number'] ?>" class="form-control" id="phoNe" placeholder="Phone">
                         </div>
                     </div>
                     <div class="col-sm-4 col-12">
                         <div class="form-group">
                             <label for="inputEmail">Email</label>
-                            <input type="email" name="patient_email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                            <input type="email" name="patient_email" value="<?php echo $rows['patient_email'] ?>" class="form-control" id="inputEmail" placeholder="example@gmail.com">
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-12">
                         <div class="form-group">
                             <label for="addreSs">Address</label>
-                            <textarea class="form-control" name="patient_address" id="addreSs" rows="3" placeholder="Current Address"></textarea>
+                            <textarea class="form-control" name="patient_adress" value="<?php echo $rows['patient_adress'] ?>" id="addreSs" rows="3" placeholder="Current Address"></textarea>
                         </div>
                     </div>
                     
@@ -82,7 +82,7 @@ if (isset($_POST['update'])) {
     $patient_email = $_POST['patient_email'];
 
 
-    $sql = "update patients set patient_name  = '$patient_name' , patient_adress = '$patient_adress' , patient_number = '$patient_number' , patient_email = '$patient_email' where id = $Id";
+    $sql = "update patients set patient_name='$patient_name',patient_adress='$patient_adress',patient_number = '$patient_number', patient_email = '$patient_email' where id = $Id";
     $result = mysqli_query($conn, $sql);
 
 

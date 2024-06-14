@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2024 at 10:29 AM
+-- Generation Time: Jun 14, 2024 at 05:29 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +36,17 @@ CREATE TABLE `appointments` (
   `Patientid_FK` int(11) NOT NULL,
   `Doctorid_FK` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `appointments`
+--
+
+INSERT INTO `appointments` (`id`, `name`, `email`, `appointment_date`, `appointment_time`, `Patientid_FK`, `Doctorid_FK`) VALUES
+(1, 'Ali Hamza', 'alihamza@gmail.com', '2024-05-22', '08:10:49', 7, 5),
+(2, 'Rayyan', 'rayyan@gmail.com', '2024-07-11', '09:15:50', 14, 8),
+(3, 'Ibrahim', 'ibrahim@gmail.com', '2024-07-13', '12:00:20', 5, 7),
+(4, 'Rayyan', 'rayyan@gmail.com', '2024-07-11', '09:15:50', 14, 8),
+(5, 'Ibrahim', 'ibrahim@gmail.com', '2024-07-13', '12:00:20', 5, 7);
 
 -- --------------------------------------------------------
 
@@ -107,7 +118,8 @@ CREATE TABLE `doctors` (
 
 INSERT INTO `doctors` (`id`, `name`, `address`, `phone_number`, `email`, `Cityid_FK`, `specialization`) VALUES
 (5, 'Dr. Sameer', 'North Nazmabad', 2147483647, 'sameer@gmail.com', 8, 'Cardiology'),
-(7, 'Dr. Haziq', 'North Nazmabad', 2147483647, 'haziq@gmail.com', 8, 'Dermatology');
+(7, 'Dr.Jameel', 'Nazimabad Near Makki Masjid', 316402598, 'dr.jameel@gmail.com', 28, 'psychiatry'),
+(8, 'Dr. Kashif', ' Jodia Bazar Near Achhi Kabar,', 2147483647, 'Kashif@gmail.com', 11, 'Allergy and immunology');
 
 -- --------------------------------------------------------
 
@@ -147,10 +159,10 @@ CREATE TABLE `patients` (
 --
 
 INSERT INTO `patients` (`id`, `patient_name`, `patient_adress`, `patient_number`, `patient_email`) VALUES
-(1, 'Alex', '', 458458, 'alex@gmail.com'),
-(5, 'peter', '', 2147483647, 'peter@gmail.com'),
-(7, 'max', '', 654513255, 'max@gmail.com'),
-(14, 'henry', '', 156486487, 'henry@gmail.com');
+(1, 'Alex', 'North Nazimabad', 2147483647, 'alex@gmail.com'),
+(5, 'peter', ' Malir Industrial Area Near Liaquat Sq.Malir Colony,', 2147483647, 'peter@gmail.com'),
+(7, 'max', '3-Shalimar Plaza Chandni Chowk,', 2147483647, 'max@gmail.com'),
+(14, 'henry', ' 31-Sadaf Centre', 156486487, 'henry@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -170,9 +182,7 @@ CREATE TABLE `role` (
 INSERT INTO `role` (`id`, `Role_Name`) VALUES
 (2, 'Patient'),
 (3, 'Doctor'),
-(4, 'Administrator'),
-(5, 'haziq'),
-(6, 'MEDICAL');
+(4, 'Administrator');
 
 -- --------------------------------------------------------
 
@@ -275,7 +285,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `cities`
@@ -287,7 +297,7 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `patients`
